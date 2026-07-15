@@ -1,0 +1,9 @@
+# heavy intermediates — documented in the logs, excluded from the public repo
+04-assets/video/
+04-assets/audio/
+04-assets/rejects/
+05-final/*.mp4
+05-final/*.wav
+!05-final/NaaS-ThisYear-roughcut-v7.mp4
+05-final/*.jpg
+.DS_Store
