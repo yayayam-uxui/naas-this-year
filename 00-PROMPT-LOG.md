@@ -334,6 +334,25 @@ White removal via **corner flood-fill** (`-fuzz 6% -draw "alpha X,Y floodfill"` 
 
 ---
 
+## Entry 016 — ALEX becomes WISP (two techniques for one name)
+**Date:** 16 July 2026 (past midnight) · **Tools:** ImageMagick (median inpainting), media_upload, Cinema Studio 3.0
+**Stage:** Finishing — brand consistency
+
+### Context
+With the brand named WISP, the invented caller name "ALEX" on the S8 phone screens became a contradiction. It appeared twice: a full-frame incoming-call close-up, and the window shot (small but legible). Fixing only one would create an inconsistency worse than either.
+
+### The two techniques
+1. **Close-up — pixels, not prompts (0 credits):** the shot is rock-steady, so the segment became a 1.13s still insert from an edited frame. Text removal via `-statistic Median 45x45` (thin white strokes dissolve into the screen gradient — a first attempt with a stretched sample strip left a visible seam box and was discarded), then "WISP / Assistant" re-typed in a system font at the original position.
+2. **Window shot — regeneration from an edited keyframe (60 credits):** the segment contains acting (growing smile, the answer) so it can't freeze. The tiny tilted "ALEX" was median-erased and "WISP" re-typed at the phone's angle at 16pt; the frame was uploaded and the shot regenerated with staging "watches the ringing phone for four seconds, answers only in the final two." Result: WISP legible throughout, and the pickup lands so that "You'll see." falls mid-lift — addressed to the friend, completed by the answer.
+
+### What went wrong → how it was fixed
+The same curl "network failure" from Entry 013 struck again — and was again a wrong working directory. Twice is a pattern: absolute paths from now on.
+
+### What changed
+`NaaS-ThisYear-FINAL.mp4` rebuilt (58.9s): WISP on every screen, v7 audio untouched. The film and the brand now agree with each other.
+
+---
+
 ## Appendix — Full text of the kickoff prompt (Hebrew, verbatim)
 
 היי קלוד,
