@@ -14,7 +14,7 @@ Watch it first. Then read on.
 | 16 keyframes + character refs + end-card plate | `04-assets/keyframes/`, `04-assets/character/` |
 | Reproducible assembly script | `05-final/assemble.sh` |
 | Full scripts (BOLD used, SAFE fallback) | `02-creative/script-final.md` |
-| Logs: 9 rubric entries, 4 AI mistakes, full transcript | `00-PROMPT-LOG.md`, `00-CONVERSATION-LOG.md` |
+| Logs: 9 rubric entries, 4 AI mistakes, full transcript | `00-PROMPT-LOG.md`, `00-CONVERSATION-LOG-VIDEO.md` |
 
 **Budget:** two nights of full production ≈ 570 credits. **Remaining: 545.** Flow's 970 untouched.
 

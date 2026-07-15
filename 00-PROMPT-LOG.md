@@ -14,7 +14,7 @@ Each entry follows the format the brief asks for:
 Entries are numbered in the order they happened, not in the order they appear in the final video.
 Dead ends are kept on purpose. They are the point.
 
-**Companion file:** the full unabridged conversation (every Yam question ↔ every Claude answer) is in [00-CONVERSATION-LOG.md](00-CONVERSATION-LOG.md). This file is the curated rubric-format view; that one is the raw record.
+**Companion file:** the full unabridged conversation (every Yam question ↔ every Claude answer) is in [00-CONVERSATION-LOG-VIDEO.md](00-CONVERSATION-LOG-VIDEO.md). This file is the curated rubric-format view; that one is the raw record.
 
 **Tools used in this deliverable (running list — update as we go):**
 
@@ -316,6 +316,21 @@ Yam flagged two lines in v6 as "not connected": the friend's early "How's the 10
 
 ### What changed
 `NaaS-ThisYear-roughcut-v7.mp4` — 58.9s, mean −18.5dB, peak −1.5dB. Voice bus 12 → 11 stems, all mix indices re-mapped (assemble-v7.sh). Cost: 0.4 credits. Balance ~236.
+
+---
+
+## Entry 015 — The logo lands → FINAL
+**Date:** 15 July 2026 (late night) · **Tools:** ImageMagick, ffmpeg
+**Stage:** Finishing
+
+### Context
+Ido's logo arrived — the brand is **WISP** (a wisp flame-drop mark + wordmark) — as JPGs on a white background, minutes after the repo went public. Yam also split the transcript into per-deliverable logs (this project's is now `00-CONVERSATION-LOG-VIDEO.md`).
+
+### The technique
+White removal via **corner flood-fill** (`-fuzz 6% -draw "alpha X,Y floodfill"` from all four corners) instead of a global `-transparent white` — the flame's interior contains near-whites that a global pass would have punched holes through. End card recomposed with the WISP lockup replacing the [ LOGO ] placeholder; master re-encoded; v7's audio mix muxed unchanged.
+
+### What changed
+**`05-final/NaaS-ThisYear-FINAL.mp4` — 58.9s. The film is complete.** Zero credits (all local). Repo updated: FINAL row in the iterations table, brand assets included, only the final cut ships. Open team decision: the on-screen caller name "ALEX" (a night-one image-model invention) — adopt as WISP's assistant name, or regen the keyframe for 2 credits.
 
 ---
 
