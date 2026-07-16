@@ -57,3 +57,31 @@ _Separate from the video track's [00-CONVERSATION-LOG-VIDEO.md](00-CONVERSATION-
 - קרא את docx סעיף 3 (✅ 4 מקורות: PubMed, Batch 4.19%, market CAGR, competitors).
 - הסביר Stretch Zone (Role 1 Onboarding = חובה / Role 2 = בוחרים 1); המליץ Role 2 = **GTM** (כ-70% מוכן ב-brief של עידו); Role 1 = בעיקר הרכבה מחומר קיים.
 - עדכן סטטוס: רוב הדליברבלים ✅. הכין אג'נדה ל"הצפה" בפגישת מחר. מוכן לבנות שלד.
+
+### [Yam] — נתנה go, וזרמה עם משוב חי תוך כדי בנייה
+> קדימה. עידו יצר לוגו (WISP), מיי דק ב-Gamma, החומרים הגיעו. עשה noir לתמונות. בנה על המותג.
+> ואז (תוך כדי): הדיזיין סיסטם צועק/לא נגיש · פונט קטן יותר כמו Inter · הסקשנים לא נכנסים למסך · לוח שנה אמיתי · prompt log כשיחה · לא להתחיל מהסרטון · **ניווט בצד שמאל, פלטה רגועה, בלי גרדיאנטים** (רפרנס: withdavid.ai) · remove em dashes · team שניים בשורה · תבנה את ה-Stretch Zone · QA מעיני הבודק/עוזר ההוראה · אני הולכת לישון, תסקור אותנטיות למקורות.
+
+### [Claude] — סשן בנייה (לילה)
+- קרא: המטלה (9 חלקים + Stretch Zone = 30%), הדק (WISP/Gamma), הלוגו, דוק עידו (קהל+voice+brief+לוח תוכן מלא), docx סעיף 3 (שוק+מקורות), יומן הפרומפטים (16 רשומות + 4 טעויות AI).
+- זיהה שהסרטון הסופי האמיתי = `NaaS-ThisYear-FINAL.mp4` (ממותג WISP), לא v7 — והחליף.
+- **3 סבבי עיצוב** עד לנחיתה: (1) dark cinematic → (2) מרוסן → (3) **withdavid: קרם בהיר, Instrument Serif + Inter, סייד-בר שמאלי nested, בלי גרדיאנטים.**
+- בנה `06-landing/` (index.html · styles.css · app.js · assets): 16 סקשנים FRONT/BACK, קרוסלת דק, מחליף פרסונות, **לוח חודשי אינטראקטיבי (מרץ 2026, event pills)**, prompt log כשיחה (Yam/Claude), team 2-בשורה noir, אייקונים inline SVG.
+- בנה את **ה-Stretch Zone**: Role 1 (Onboarding Handbook) + Role 2 = **Customer Success Playbook** (המלצה + FAQ אמיתי) + כלי AI קוליים מגניבים (Vapi/Retell/Bland/ElevenLabs). זו הדליברבל השני של ים.
+- הסיר em dashes מהקופי שלי; השאיר מילה-במילה את הפוסטים של עידו (נאמן למקור).
+- QA ויזואלי מלא (screenshots) — הכל נטען.
+- כתב `06-landing/MORNING-REVIEW.md`: איך לראות/לפרוס · **סקירת אותנטיות** (מה נשאר verbatim מול מה שעוצב) · QA מעיני הבודק מול 9+Stretch · אג'נדה לפגישה.
+- **Deploy חסום** — Vercel CLI לא מאומת ואין token; השאיר פקודת deploy של שורה אחת ל-Yam לבוקר.
+
+## 16 July 2026
+
+### [Yam] — נאמנות למטלה ולמקורות (הבקשה המרכזית)
+> האתר מעולה, עכשיו זה **נאמנות למטלה ונאמנות למקורות — החברים שלי**. עברי על המטלה, ואז על כל מקור שהחברים יצרו, ותביני את הכוונה. הפרומט לוג הוא **per section** — כל חבר צוות קיבל סעיף, לכל סעיף יש פרומט לוג/עדות (לינק לצ׳אט / קובץ / דרופדאון שיחה). **Reflection** = כל אחד על עצמו, על המשימה שלו והחוויה שלו. במקום "sources every claim is sourced" → ציטוטים פשוטים בתחתית כמו מאמר. להבליט **כלי AI** (Perplexity, Gemini, Adobe ללוגו), לא mixkit. חוששת שפספסנו את עבודת המותג של עידו (שם, לוגו, brand voice). תעבוד לאט, בזהירות, **תן לכמה סוכנים לבקר**.
+
+### [Claude] — פאס נאמנות מלא (לילה)
+- קרא מחדש את כל המקורות: המטלה (PDF, 9 חלקים + Stretch), הדק (WISP, 9 שקפים), ה-market docx של מיי, **`00-PRODUCT-BRIEF.md`** (מקור ה-4 פרסונות verbatim + ה-ethos + הבעלויות), הדוק של עידו (התברר כ**תבנית ריקה** — התוכן האמיתי בדק/docx/product-brief), והמקורות היצירתיים של הוידאו.
+- **מיפוי בעלויות מאושר:** Ido=Name+Logo (Adobe) · Mia=Marketing+Cowork · Mei=Deck+Market (Perplexity/ChatGPT/Gamma) · Yam=Video+Stretch+Landing.
+- **שינויים:** (1) Prompt Log → **per-section** עם אינדקס עדות לכל דליברבל + owner; (2) Reflection → **per-member** (של ים מלא, השאר slots); (3) Sources → **ציטוטים גלויים** ממוספרים; (4) Tools → 8 כלי AI עם owner, mixkit/ffmpeg/ImageMagick להערת שוליים; (5) הוספת **Name+Logo (Part 1)** ו-**Marketing (Part 2)** עם תוכן אמיתי + placeholders ל-Ido/Mia; (6) הסרת em-dashes מהקופי שלנו.
+- **ביקורת 3 סוכנים** (faithful-to-assignment / faithful-to-sources / copy-QA) — כולם עשו עבודה אמיתית. תגלית מרכזית: **הפרסונות/סטטיסטיקות/brand-voice כולם מגובים במקור, שום דבר לא הומצא.** תיקון היושרה היחיד: **80%** היה ללא מקור (ומיי כתבה "prevalent") → הוסף ציטוט אמיתי (solvingprocrastination, 80–95%) + הורד "regularly". תיקונים קטנים נוספים: הסרת סטט מומצא ב-FAQ, יישור שורת hero לציטוט האמיתי, ניגודיות, "illustrative".
+- **דגלים לצוות (completeness):** Cowork ריק (Mia) · לינקי proof חסרים ל-1/2/5 · **NaaS→WISP ב-12 הפוסטים** (סיכון consistency, השארתי verbatim לפי בקשתך) · רפלקציות/הצהרות של Mia/Mei/Ido · 2–3 לוגואים שנפסלו (Ido) · marketing brief (Mia).
+- **Deploy:** פרוס ל-production, alias ל-`wisp-onepersonunicorn.vercel.app` → **200 ציבורי, OG תקין, בלי login wall.** כתב `MORNING-REVIEW.md` מעודכן עם הכל.

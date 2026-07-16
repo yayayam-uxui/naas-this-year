@@ -1,0 +1,300 @@
+<title>WISP — צ׳קליסט הגשה</title>
+<style>
+  :root{
+    --bg:#F2F0E9; --panel:#FBFAF6; --panel-2:#F6F4EE;
+    --ink:#1B1A16; --ink-soft:#55534B; --ink-dim:#8B897E;
+    --line:rgba(27,26,22,.12); --line-soft:rgba(27,26,22,.07);
+    --accent:#157F79; --accent-soft:#E4EEEC;
+    --blocker:#B23B34; --blocker-soft:#F1DFDC;
+    --needed:#9C6B16; --needed-soft:#F1E7D4;
+    --done:#157F79; --done-soft:#E4EEEC;
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Arial,sans-serif;
+    --radius:14px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#17150F; --panel:#211E17; --panel-2:#1C1A14;
+      --ink:#F3F0E7; --ink-soft:#C8C4B8; --ink-dim:#918D80;
+      --line:rgba(243,240,231,.14); --line-soft:rgba(243,240,231,.07);
+      --accent:#43ACA3; --accent-soft:#1D302D;
+      --blocker:#E28377; --blocker-soft:#38201C;
+      --needed:#D6A94A; --needed-soft:#332A18;
+      --done:#43ACA3; --done-soft:#1D302D;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#17150F; --panel:#211E17; --panel-2:#1C1A14;
+    --ink:#F3F0E7; --ink-soft:#C8C4B8; --ink-dim:#918D80;
+    --line:rgba(243,240,231,.14); --line-soft:rgba(243,240,231,.07);
+    --accent:#43ACA3; --accent-soft:#1D302D;
+    --blocker:#E28377; --blocker-soft:#38201C;
+    --needed:#D6A94A; --needed-soft:#332A18;
+    --done:#43ACA3; --done-soft:#1D302D;
+  }
+  :root[data-theme="light"]{
+    --bg:#F2F0E9; --panel:#FBFAF6; --panel-2:#F6F4EE;
+    --ink:#1B1A16; --ink-soft:#55534B; --ink-dim:#8B897E;
+    --line:rgba(27,26,22,.12); --line-soft:rgba(27,26,22,.07);
+    --accent:#157F79; --accent-soft:#E4EEEC;
+    --blocker:#B23B34; --blocker-soft:#F1DFDC;
+    --needed:#9C6B16; --needed-soft:#F1E7D4;
+    --done:#157F79; --done-soft:#E4EEEC;
+  }
+
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink-soft);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .page{max-width:780px;margin:0 auto;padding:clamp(1.4rem,4vw,3rem) clamp(1.1rem,4vw,2rem) 4rem;}
+  h1,h2{color:var(--ink);font-family:var(--serif);font-weight:400;line-height:1.1;}
+
+  /* hero */
+  .brand{font-family:var(--serif);font-size:.95rem;letter-spacing:.32em;color:var(--accent);font-weight:700;}
+  h1{font-size:clamp(2.1rem,6vw,3.1rem);margin:.5rem 0 .4rem;letter-spacing:-.01em;text-wrap:balance;}
+  .sub{color:var(--ink-dim);font-size:.95rem;max-width:52ch;margin:0 0 1.6rem;}
+
+  /* progress */
+  .progress{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:1.1rem 1.25rem;}
+  .progress__row{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:.7rem;}
+  #pctLabel{font-family:var(--serif);font-size:2rem;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums;}
+  #countLabel{font-size:.82rem;color:var(--ink-dim);font-variant-numeric:tabular-nums;}
+  .bar{height:9px;background:var(--panel-2);border:1px solid var(--line-soft);border-radius:999px;overflow:hidden;}
+  .bar__fill{height:100%;width:0;background:var(--accent);border-radius:999px;transition:width .5s cubic-bezier(.4,0,.2,1);}
+  .ddl{display:inline-flex;align-items:center;gap:.5em;background:var(--needed-soft);color:var(--needed);border:1px solid var(--line-soft);font-weight:700;font-size:.82rem;padding:.5em .95em;border-radius:999px;margin-bottom:1.3rem;font-variant-numeric:tabular-nums;}
+  .toplink{display:inline-flex;align-items:center;gap:.4em;margin-top:1rem;font-size:.85rem;color:var(--accent);font-weight:600;text-decoration:none;}
+  .toplink:hover{text-decoration:underline;}
+
+  /* groups */
+  .group{margin-top:2rem;}
+  .group__head{display:flex;align-items:baseline;gap:.7rem;margin-bottom:.7rem;padding-inline-start:.15rem;flex-wrap:wrap;}
+  .group__head h2{font-size:1.5rem;}
+  .group__meta{font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);}
+  .group__open{margin-inline-start:auto;font-size:.72rem;color:var(--ink-dim);font-variant-numeric:tabular-nums;}
+
+  /* task rows */
+  .task{display:flex;align-items:flex-start;gap:.8rem;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:.85rem 1rem;margin-bottom:.5rem;cursor:pointer;transition:border-color .18s,background .18s;}
+  .task:hover{border-color:var(--accent);}
+  .task input{position:absolute;opacity:0;width:0;height:0;}
+  .box{flex:0 0 auto;width:20px;height:20px;margin-top:.15rem;border:1.5px solid var(--ink-dim);border-radius:6px;display:grid;place-items:center;transition:all .18s;}
+  .box::after{content:"";width:10px;height:6px;border-inline-start:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) scale(0);transition:transform .18s;margin-top:-2px;}
+  .task input:focus-visible + .box{outline:2px solid var(--accent);outline-offset:2px;}
+  .txt{flex:1;color:var(--ink);font-size:.93rem;}
+  .txt b{font-weight:700;}
+  .txt .en{font-family:var(--sans);}
+  .chip{flex:0 0 auto;align-self:flex-start;font-size:.64rem;font-weight:700;letter-spacing:.04em;padding:.3em .7em;border-radius:999px;white-space:nowrap;}
+  .chip--blocker{color:var(--blocker);background:var(--blocker-soft);}
+  .chip--needed{color:var(--needed);background:var(--needed-soft);}
+  .chip--optional{color:var(--ink-dim);background:var(--panel-2);border:1px solid var(--line);}
+  .chip--done{color:var(--done);background:var(--done-soft);}
+
+  /* checked state */
+  .task.is-done{background:var(--panel-2);border-color:var(--line-soft);}
+  .task.is-done .box{background:var(--accent);border-color:var(--accent);}
+  .task.is-done .box::after{transform:rotate(-45deg) scale(1);}
+  .task.is-done .txt{color:var(--ink-dim);text-decoration:line-through;text-decoration-color:var(--ink-faint,var(--ink-dim));}
+
+  .done-group{margin-top:2.6rem;padding-top:1.6rem;border-top:1px solid var(--line);}
+  .done-group .group__head h2{color:var(--ink-soft);}
+
+  /* footer */
+  .foot{margin-top:2.6rem;background:var(--accent-soft);border:1px solid var(--line-soft);border-radius:var(--radius);padding:1.1rem 1.25rem;font-size:.88rem;color:var(--ink-soft);}
+  .foot strong{color:var(--ink);}
+  .foot p{margin:.3rem 0;}
+  .deadline{color:var(--blocker);font-weight:600;}
+  .actions{display:flex;justify-content:flex-start;margin-top:1.4rem;}
+  .reset{font-family:var(--sans);font-size:.78rem;color:var(--ink-dim);background:none;border:1px solid var(--line);border-radius:999px;padding:.45em 1em;cursor:pointer;transition:border-color .18s,color .18s;}
+  .reset:hover{border-color:var(--blocker);color:var(--blocker);}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+
+<div class="page" dir="rtl">
+  <header>
+    <div class="brand">WISP</div>
+    <h1>מה חסר כדי להגיש</h1>
+    <p class="sub">One Person Unicorn · Reichman · צ׳קליסט הגשה קבוצתי. סמנו משימות כשמסיימים — נשמר לכם אוטומטית בדפדפן.</p>
+    <div class="ddl">⏳ דדליין: היום · 16/7 · 20:00 · הגשה ב-Moodle</div>
+    <div class="progress">
+      <div class="progress__row"><span id="pctLabel">0%</span><span id="countLabel">0 מתוך 0 הושלמו</span></div>
+      <div class="bar"><div class="bar__fill" id="barFill"></div></div>
+    </div>
+    <a class="toplink" href="https://wisp-onepersonunicorn.vercel.app" target="_blank" rel="noopener">↗ האתר החי</a>
+  </header>
+
+  <!-- MIA -->
+  <section class="group">
+    <div class="group__head"><h2>מיה</h2><span class="group__meta">Marketing · Cowork</span></div>
+    <label class="task" data-id="mia-cowork">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt"><b><span class="en">Cowork skill</span> (Part 8) — מיה בנתה ✓.</b> נשאר רק שמיה תשלח לים: לינק לשיחה + מה שהוא מייצר + שורה מה זה עושה, וזה נכנס לאתר.</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+    <label class="task" data-id="mia-proof">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">להוסיף <span class="en">proof-of-work</span> ל-Marketing (Part 2) — לינק לצ׳אט משותף או הקלטת מסך.</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+    <label class="task" data-id="mia-brief">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">לכתוב את ה-<span class="en">marketing brief</span> (positioning + channel plan) — האתר שומר לזה מקום.</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+    <label class="task" data-id="mia-reflect">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">לכתוב <span class="en">Reflection</span> אישי על החלק שלך + 2 טעויות AI שתפסת ותיקנת.</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+    <label class="task" data-id="mia-whodidwhat">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">לכתוב <span class="en">Who-did-what</span> אישי + חתימה — כולל <b>באיזה כלי ואיך</b> כתבת את 12 הפוסטים.</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+    <label class="task" data-id="team-naas">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt"><b>NaaS → WISP</b> ב-12 הפוסטים בלוח התוכן — כרגע כתוב "NaaS" מול "WISP" בכל השאר. זה בדיוק ה-consistency (10 נק') שהמטלה מזהירה עליו. ~15 דקות. <span class="en"></span></span>
+      <span class="chip chip--optional">מומלץ</span>
+    </label>
+  </section>
+
+  <!-- MEI -->
+  <section class="group">
+    <div class="group__head"><h2>מיי</h2><span class="group__meta">Pitch Deck · Market</span></div>
+    <label class="task" data-id="mei-gamma">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">להוסיף <span class="en">Gamma share link</span> + צ׳אט הבנייה ל-Pitch Deck (Part 5).</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+    <label class="task" data-id="mei-research">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">להוסיף לינק לצ׳אט המחקר ל-Market (Part 3) — המקורות כבר מופיעים באתר.</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+    <label class="task" data-id="mei-reflect">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">לכתוב <span class="en">Reflection</span> אישי + 2 טעויות AI.</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+    <label class="task" data-id="mei-whodidwhat">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">לכתוב <span class="en">Who-did-what</span> אישי + חתימה.</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+    <label class="task" data-id="mei-80">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">ליישר את ה-<b>80%</b>: הדק אומר 80%, מסמך השוק אומר "prevalent" בלי מספר. כדאי שיהיו עקביים.</span>
+      <span class="chip chip--optional">רשות</span>
+    </label>
+    <label class="task" data-id="mei-slides">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">הדק הוא 9 שקפים, המטלה ביקשה 6–8. אפשר לקצץ ל-8 (סיכון נמוך).</span>
+      <span class="chip chip--optional">רשות</span>
+    </label>
+  </section>
+
+  <!-- IDO -->
+  <section class="group">
+    <div class="group__head"><h2>עידו</h2><span class="group__meta">Name &amp; Logo · Brand</span></div>
+    <label class="task" data-id="ido-rejected">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt"><b>2–3 כיווני שם/לוגו שנפסלו</b> + שורה על כל אחד ולמה WISP ניצח (Part 1 דורש את זה במפורש). האתר שומר לזה מקום.</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+    <label class="task" data-id="ido-proof">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">להוסיף <span class="en">proof-of-work</span> ל-Name+Logo — צ׳אט של Adobe או הקלטת מסך.</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+    <label class="task" data-id="ido-reflect">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">לכתוב <span class="en">Reflection</span> אישי + 2 טעויות AI.</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+    <label class="task" data-id="ido-whodidwhat">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">לכתוב <span class="en">Who-did-what</span> אישי + חתימה.</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+  </section>
+
+  <!-- YAM -->
+  <section class="group">
+    <div class="group__head"><h2>ים</h2><span class="group__meta">Video · Stretch · Landing</span></div>
+    <label class="task" data-id="yam-whodidwhat">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt">להרחיב את ה-<span class="en">Who-did-what</span> שלך (כרגע "to expand") + חתימה.</span>
+      <span class="chip chip--needed">נדרש</span>
+    </label>
+    <label class="task" data-id="yam-done" >
+      <input type="checkbox" checked><span class="box"></span>
+      <span class="txt">Video (Part 4) + prompt log + הקלטת מסך · Stretch Zone (2 roles + FAQ) · Landing page · Reflection — הכל מוכן.</span>
+      <span class="chip chip--done">מוכן</span>
+    </label>
+  </section>
+
+  <!-- TEAM DECISIONS -->
+  <section class="group">
+    <div class="group__head"><h2>החלטות צוות</h2><span class="group__meta">ביחד</span></div>
+    <label class="task" data-id="team-incognito">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt"><b>לפתוח את הלינק ב-incognito</b> לפני הגשה. לינק שלא נפתח = לא הוגש.</span>
+      <span class="chip chip--blocker">חוסם</span>
+    </label>
+    <label class="task" data-id="team-submit">
+      <input type="checkbox"><span class="box"></span>
+      <span class="txt"><b>להגיש ב-Moodle</b> — לינק אחד: <span class="en">wisp-onepersonunicorn.vercel.app</span></span>
+      <span class="chip chip--blocker">חוסם</span>
+    </label>
+  </section>
+
+  <!-- ALREADY DONE -->
+  <section class="group done-group">
+    <div class="group__head"><h2>מה כבר מוכן</h2><span class="group__meta">הבסיס בנוי</span></div>
+    <label class="task" data-id="d-brand"><input type="checkbox" checked><span class="box"></span><span class="txt">שם + לוגו + tagline — WISP, עקבי בכל האתר.</span><span class="chip chip--done">מוכן</span></label>
+    <label class="task" data-id="d-pitch"><input type="checkbox" checked><span class="box"></span><span class="txt">Problem · Market + מקורות · Solution · Personas · The Ask.</span><span class="chip chip--done">מוכן</span></label>
+    <label class="task" data-id="d-video"><input type="checkbox" checked><span class="box"></span><span class="txt">סרטון הפרסומת (Yam) — 60 שניות, ממותג.</span><span class="chip chip--done">מוכן</span></label>
+    <label class="task" data-id="d-deck"><input type="checkbox" checked><span class="box"></span><span class="txt">Pitch deck (Mei) — 9 שקפים, Gamma. <i>חסר רק share link.</i></span><span class="chip chip--done">מוכן</span></label>
+    <label class="task" data-id="d-market"><input type="checkbox" checked><span class="box"></span><span class="txt">Market analysis + 4 מקורות עם לינקים (Mei).</span><span class="chip chip--done">מוכן</span></label>
+    <label class="task" data-id="d-calendar"><input type="checkbox" checked><span class="box"></span><span class="txt">לוח תוכן — 12 פוסטים אמיתיים (Mia). <i>חסר רק NaaS→WISP.</i></span><span class="chip chip--done">מוכן</span></label>
+    <label class="task" data-id="d-stretch"><input type="checkbox" checked><span class="box"></span><span class="txt">Stretch Zone — 2 roles + FAQ אמיתי (Yam) · 30% מהציון.</span><span class="chip chip--done">מוכן</span></label>
+    <label class="task" data-id="d-landing"><input type="checkbox" checked><span class="box"></span><span class="txt">Landing page + deploy ציבורי + OG image (Yam).</span><span class="chip chip--done">מוכן</span></label>
+  </section>
+
+  <footer class="foot">
+    <p><strong>לפני הגשה:</strong> לפתוח את הלינק ב-incognito, לוודא שהכול נטען, ואז להגיש ב-Moodle — לינק אחד.</p>
+    <p class="deadline">⏳ דדליין: היום, 16/7, בשעה 20:00.</p>
+  </footer>
+
+  <div class="actions"><button class="reset" id="reset" type="button">אפס סימונים</button></div>
+</div>
+
+<script>
+  (function(){
+    var KEY="wisp-checklist-v1";
+    var inputs=Array.prototype.slice.call(document.querySelectorAll(".task input"));
+    var barFill=document.getElementById("barFill");
+    var pctLabel=document.getElementById("pctLabel");
+    var countLabel=document.getElementById("countLabel");
+    function idOf(inp){return inp.closest(".task").getAttribute("data-id");}
+    function load(){
+      var saved={};
+      try{saved=JSON.parse(localStorage.getItem(KEY)||"{}");}catch(e){}
+      inputs.forEach(function(inp){var id=idOf(inp); if(saved.hasOwnProperty(id)) inp.checked=saved[id];});
+    }
+    function save(){
+      var s={}; inputs.forEach(function(inp){s[idOf(inp)]=inp.checked;});
+      try{localStorage.setItem(KEY,JSON.stringify(s));}catch(e){}
+    }
+    function paint(){
+      inputs.forEach(function(inp){inp.closest(".task").classList.toggle("is-done",inp.checked);});
+      var total=inputs.length, done=inputs.filter(function(i){return i.checked;}).length;
+      var pct=total?Math.round(done/total*100):0;
+      barFill.style.width=pct+"%";
+      pctLabel.textContent=pct+"%";
+      countLabel.textContent=done+" מתוך "+total+" הושלמו";
+    }
+    load(); paint();
+    inputs.forEach(function(inp){inp.addEventListener("change",function(){save();paint();});});
+    document.getElementById("reset").addEventListener("click",function(){
+      try{localStorage.removeItem(KEY);}catch(e){}
+      location.reload();
+    });
+  })();
+</script>

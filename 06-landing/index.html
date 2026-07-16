@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WISP · We Don't Remind You. We Move You.</title>
+<meta name="description" content="WISP (Nudge as a Service): an AI executive assistant that replaces ignorable push notifications with live voice calls. A One Person Unicorn company built end-to-end with AI." />
+<link rel="icon" href="assets/img/wisp-mark.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://wisp-onepersonunicorn.vercel.app/" />
+<meta property="og:title" content="WISP · We Don't Remind You. We Move You." />
+<meta property="og:description" content="An AI executive assistant that replaces the ignorable push notification with a live voice call. A One Person Unicorn company built end-to-end with AI." />
+<meta property="og:image" content="https://wisp-onepersonunicorn.vercel.app/assets/img/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="WISP · We Don't Remind You. We Move You." />
+<meta name="twitter:description" content="An AI executive assistant that replaces the ignorable push notification with a live voice call." />
+<meta name="twitter:image" content="https://wisp-onepersonunicorn.vercel.app/assets/img/og.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ================= LEFT SIDEBAR ================= -->
+<aside class="sidebar" id="sidebar">
+  <a href="#hero" class="side-logo"><img src="assets/img/wisp-logo.png" alt="WISP" /></a>
+  <nav class="side-nav">
+    <div class="nav-group">
+      <span class="nav-group__label"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg> The Company</span>
+      <a href="#hero">Overview</a>
+      <a href="#brand">Name &amp; Logo</a>
+      <a href="#problem">The Problem</a>
+      <a href="#market">Market &amp; Competition</a>
+      <a href="#solution">The Solution</a>
+      <a href="#personas">The Personas</a>
+      <a href="#marketing">Marketing &amp; Content</a>
+      <a href="#ad">The Ad</a>
+      <a href="#deck">Pitch Deck</a>
+      <a href="#ask">The Ask</a>
+    </div>
+    <div class="nav-group">
+      <span class="nav-group__label"><svg class="ico" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.4-.6-.6-2.4 2.1-2.1Z"/></svg> Behind the Build</span>
+      <a href="#tools">How We Built It</a>
+      <a href="#prompts">Prompt Log &amp; Evidence</a>
+      <a href="#reflection">Reflection</a>
+      <a href="#stretch">Stretch Zone</a>
+      <a href="#cowork">Cowork Build</a>
+      <a href="#team">Who Did What</a>
+    </div>
+  </nav>
+  <a href="https://github.com/yayayam-uxui/naas-this-year" target="_blank" rel="noopener" class="side-repo">↗ process repo</a>
+</aside>
+<button class="side-toggle" id="sideToggle" aria-label="menu">☰</button>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="content">
+
+  <!-- HERO -->
+  <section class="block hero" id="hero">
+    <div class="hero__grid">
+      <div class="hero__lead">
+        <p class="eyebrow reveal" data-d="1">Nudge as a Service</p>
+        <h1 class="hero__title reveal" data-d="1">We Don't Remind You. We Move You.</h1>
+        <p class="lede reveal" data-d="2">An AI executive assistant that replaces the ignorable push notification with a live voice call.</p>
+        <div class="hero__cta reveal" data-d="3">
+          <a href="#ad" class="btn-pill"><svg class="ico" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg> Watch the 60-second ad</a>
+        </div>
+        <p class="meta-line reveal" data-d="3">One Person Unicorn · Reichman University · built with AI by Mia, Yam, Mei &amp; Ido</p>
+      </div>
+      <div class="hero__visual reveal" data-d="2">
+        <div class="call-card">
+          <div class="call-ring">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          </div>
+          <div class="call-status">WISP · incoming call</div>
+          <div class="call-persona" id="callPersona">Tough Love</div>
+          <div class="call-line" id="callLine">“Out of bed. Now.”</div>
+          <div class="call-actions">
+            <span class="call-btn decline" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+            <span class="call-btn accept" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAME + LOGO -->
+  <section class="block" id="brand">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 4.5 2 7h10c0-2.5 2-4 2-7a7 7 0 0 0-7-7Z"/><path d="M9 21h6"/></svg> Name + Logo · Part 1 · owner Ido</p>
+    <h2>The brand is WISP.</h2>
+    <p class="lede">We Don't Remind You. We Move You.</p>
+    <div class="brandrow">
+      <div class="brandmark"><img src="assets/img/wisp-logo.png" alt="WISP logo, a flame-drop mark above the WISP wordmark" /></div>
+      <div class="brandfacts">
+        <p>An AI-generated flame-drop mark and wordmark, designed by Ido in <strong>Adobe</strong>. The working name through development was <em>NaaS (Nudge as a Service)</em>; the final brand is <strong>WISP</strong>, and it carries across the deck, the ad, the posts and every asset here.</p>
+        <div class="ph"><span class="ph__tag">Owner · Ido</span> Why we chose WISP over the directions we dropped, plus 2–3 rejected name / logo alternatives with a line on each, drop in here. <span class="ph__owner">owner: Ido</span></div>
+      </div>
+    </div>
+    <p class="proof-row"><span class="proof todo">Proof of work · Ido · Adobe generation · add screen recording or shared chat</span></p>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="block" id="problem">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><path d="m10.29 3.86-8.4 14.53A2 2 0 0 0 3.6 21h16.8a2 2 0 0 0 1.71-2.61L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> The Problem</p>
+    <h2>People don't lack goals. They lack accountability.</h2>
+    <div class="statrow">
+      <div class="stat"><div class="stat__num">80%</div><div class="stat__label">of students procrastinate</div><div class="stat__sub">Research ties it to guilt, anxiety, stress and poorer academic and health outcomes.</div></div>
+      <div class="stat"><div class="stat__num">4.19%</div><div class="stat__label">push-notification open rate</div><div class="stat__sub">The other 95.81% is where goals quietly go to die.</div></div>
+    </div>
+    <p class="callout">Personal commitments are easy to postpone. Passive reminders are designed to be ignored.</p>
+    <p class="src-note">The 80% figure: an estimated 80–95% of college students procrastinate, per published research summarised at <a href="https://solvingprocrastination.com/procrastination-statistics/" target="_blank" rel="noopener">solvingprocrastination.com</a>.</p>
+  </section>
+
+  <!-- MARKET & COMPETITION -->
+  <section class="block" id="market">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg> Market &amp; Competition · Part 3 · owner Mei</p>
+    <h2>A massive market ready for a more human solution.</h2>
+    <div class="statrow">
+      <div class="stat"><div class="stat__num">$13.15B</div><div class="stat__label">Global productivity apps market (2025)</div></div>
+      <div class="stat"><div class="stat__num">$30.85B</div><div class="stat__label">Projected by 2034</div></div>
+      <div class="stat"><div class="stat__num">9.94%</div><div class="stat__label">CAGR</div></div>
+    </div>
+    <p class="lede">Others track behavior. We interrupt inaction.</p>
+    <div class="table-wrap">
+      <table class="cmp">
+        <thead><tr><th>Player</th><th>Approach</th><th>Type</th></tr></thead>
+        <tbody>
+          <tr><td>Habitica</td><td>Gamifies tasks with RPG-style rewards</td><td><span class="tag tag--passive">Passive</span></td></tr>
+          <tr><td>Beeminder</td><td>Penalizes missed commitments with financial stakes</td><td><span class="tag tag--passive">Passive</span></td></tr>
+          <tr><td>Fabulous</td><td>Builds routines through app-based guidance</td><td><span class="tag tag--passive">Passive</span></td></tr>
+          <tr class="us"><td>WISP</td><td>High-friction, active voice intervention</td><td><span class="tag tag--active">Active</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="callout">Our differentiator is specific: personalized AI phone calls that interrupt procrastination in the moment, adapting to distinct psychological personas rather than offering a one-size-fits-all reminder. We turn passive tracking into a real conversation.</p>
+    <div class="cites">
+      <p class="cites__label">Sources</p>
+      <ol class="cites__list">
+        <li>Procrastination and its psychological effects (guilt, anxiety, stress, poorer outcomes). <a href="https://pubmed.ncbi.nlm.nih.gov/40684385/" target="_blank" rel="noopener">pubmed.ncbi.nlm.nih.gov/40684385</a></li>
+        <li>Push-notification benchmark: 4.19% average open rate. <a href="https://batch.com/ressources/etudes/benchmark-notifications-push-crm-mobile" target="_blank" rel="noopener">batch.com, push CRM benchmark</a></li>
+        <li>Productivity apps market size $13.15B (2025) → $30.85B (2034), 9.94% CAGR. <a href="https://www.businessresearchinsights.com/market-reports/productivity-apps-market-117791" target="_blank" rel="noopener">businessresearchinsights.com</a></li>
+        <li>Competitor landscape: Habitica and Fabulous. <a href="https://alternativeto.net/software/the-fabulous/" target="_blank" rel="noopener">alternativeto.net</a> · <a href="https://centenary.day/blog/article/level-your-life-8-habitica-alternatives-worth-trying-2025" target="_blank" rel="noopener">centenary.day</a></li>
+      </ol>
+      <p class="cites__note">Part 3 · Market &amp; Competitor Analysis · owner Mei. Every number above is quoted from a source we can point to.</p>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="block" id="solution">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> The Solution</p>
+    <h2>Accountability that actually calls you.</h2>
+    <ol class="steps">
+      <li><span class="steps__n">01</span><span class="steps__ico"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><div><h3>Set Goal</h3><p>You tell WISP what matters and when.</p></div></li>
+      <li><span class="steps__n">02</span><span class="steps__ico"><svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span><div><h3>AI Call</h3><p>An automated, personalized voice call, not another banner to swipe.</p></div></li>
+      <li><span class="steps__n">03</span><span class="steps__ico"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><div><h3>Take Action</h3><p>A real conversation that gets you moving, in the moment.</p></div></li>
+      <li><span class="steps__n">04</span><span class="steps__ico"><svg class="ico" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></span><div><h3>Report</h3><p>Progress tracked, so the assistant adapts to your goal, schedule and personality.</p></div></li>
+    </ol>
+  </section>
+
+  <!-- PERSONAS -->
+  <section class="block" id="personas">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> The Personas</p>
+    <h2>The right push for every personality.</h2>
+    <p class="lede">Choose your assistant at onboarding. Same mission, four completely different ways of getting you there.</p>
+    <div class="persona-tabs" role="tablist">
+      <button class="persona-tab" role="tab" aria-selected="true" id="ptab-0" aria-controls="ppanel-0" data-p="0">Tough Love</button>
+      <button class="persona-tab" role="tab" aria-selected="false" id="ptab-1" aria-controls="ppanel-1" data-p="1">The Pragmatist</button>
+      <button class="persona-tab" role="tab" aria-selected="false" id="ptab-2" aria-controls="ppanel-2" data-p="2">Supportive Partner</button>
+      <button class="persona-tab" role="tab" aria-selected="false" id="ptab-3" aria-controls="ppanel-3" data-p="3">Ego Pumper</button>
+    </div>
+    <div class="persona-body">
+      <div class="persona-panel is-active" role="tabpanel" id="ppanel-0" aria-labelledby="ptab-0" tabindex="0" data-p="0"><p class="persona-quote">“Hey loser, you promised you'd get up and run. Out of bed. Now.”</p><p class="persona-desc">Blunt, provocative commands with zero cushioning: confrontational, but never cruel enough to erode trust.</p></div>
+      <div class="persona-panel" role="tabpanel" id="ppanel-1" aria-labelledby="ptab-1" tabindex="0" data-p="1"><p class="persona-quote">“It is 6:30 AM. Your scheduled workout window is now open. Let's get to work.”</p><p class="persona-desc">Calm, objective, all business: time and fact stated with no filler, like a sharp COO reading the schedule.</p></div>
+      <div class="persona-panel" role="tabpanel" id="ppanel-2" aria-labelledby="ptab-2" tabindex="0" data-p="2"><p class="persona-quote">“I know you're tired, but remember how good you'll feel after you finish this.”</p><p class="persona-desc">Empathetic and warm, but the comfort always resolves into a direct ask. It never replaces the call to action.</p></div>
+      <div class="persona-panel" role="tabpanel" id="ppanel-3" aria-labelledby="ptab-3" tabindex="0" data-p="3"><p class="persona-quote">“Hey champ! Your time to shine is right now. Go out there and crush it!”</p><p class="persona-desc">A high-energy hype machine: praise that's earned and tied to the real stakes of the task.</p></div>
+    </div>
+    <p class="src-note">The four personas are defined in the team's product brief (compiled from the team's own working notes). The pitch deck features two of them, Tough Love and Ego Pumper.</p>
+  </section>
+
+  <!-- MARKETING & CONTENT (Part 2) -->
+  <section class="block" id="marketing">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg> Marketing &amp; Content Strategy · Part 2 · owner Mia</p>
+    <h2>A plan a founder could run on Monday.</h2>
+    <p class="lede">Target audience, brand voice, and a one-month content calendar with real copy, not placeholders.</p>
+    <div class="mk-grid">
+      <div class="mk-card">
+        <h4>Who we're for</h4>
+        <p>Students and young professionals who struggle with procrastination. Two segments we write to:</p>
+        <ul>
+          <li><b>The Unbossed Hustler:</b> freelancers and solo founders whose isolation is quietly killing their output.</li>
+          <li><b>The Procrastinating Student:</b> the Crisis Crammer and the Repeat Quitter, met with the right persona instead of another silent miss.</li>
+        </ul>
+      </div>
+      <div class="mk-card">
+        <h4>Brand voice</h4>
+        <p>WISP is a tough, devoted Executive Assistant. The user is the Boss. Not nagging, not micromanaging, not petty. <em>“We've got your back.”</em></p>
+        <ul>
+          <li><b>Always:</b> “Right now.” · “I've got you.” · “You said this mattered.” · “Let's go.”</li>
+          <li><b>Never:</b> “Just a friendly reminder…” · “Whenever you get a chance…” · “Sorry to bother you…”</li>
+          <li>Decisive, present tense, active voice.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ph"><span class="ph__tag">owner · Mia</span> The strategic marketing brief, the positioning and channel plan behind the calendar, drops in here. <span class="ph__owner">Mia to add</span></div>
+    <div class="cal">
+      <div class="cal__title">March 2026 · illustrative launch month · twelve posts, real copy, click a day</div>
+      <div class="cal__legend"><span><i class="p1"></i>The Case Against Passive</span><span><i class="p2"></i>Meet Your Assistant</span><span><i class="p3"></i>Executed, Not Excused</span></div>
+      <div class="cal__scroll">
+        <div class="cal__dows"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+        <div class="cal__grid" id="calGrid"></div>
+      </div>
+      <div id="calPost"></div>
+    </div>
+    <p class="src-note">The posts use the working name “NaaS”; the final brand is WISP. Kept verbatim here, faithful to the team's copy. Unifying the name across the posts is a pending team decision.</p>
+    <p class="proof-row"><span class="proof todo">Proof of work · Mia · add chat / screen recording</span></p>
+  </section>
+
+  <!-- THE AD -->
+  <section class="block" id="ad">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg> The Ad · Part 4 · 60 seconds, made with AI · owner Yam</p>
+    <h2>The phone rings instead of buzzing.</h2>
+    <p class="lede">Every January she writes three resolutions. Every February, they die. This year, instead of a ping, the phone rings.</p>
+    <div class="videobox">
+      <video controls preload="metadata" poster="assets/video/poster.jpg">
+        <source src="assets/video/wisp-ad.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <p class="proof-row"><a href="#prompts" class="proof">How this was made, prompt log</a> <a class="proof" href="assets/video/wisp-process.mp4" target="_blank" rel="noopener">screen recording ↗</a></p>
+  </section>
+
+  <!-- DECK -->
+  <section class="block" id="deck">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg> Pitch Deck · Part 5 · built with Gamma · owner Mei</p>
+    <h2>The full nine-slide story.</h2>
+    <div class="deck">
+      <div class="deck__viewport"><div class="deck__track" id="deckTrack">
+        <div class="deck__slide"><img src="assets/deck/slide-1.png" alt="Slide 1" loading="lazy" /></div>
+        <div class="deck__slide"><img src="assets/deck/slide-2.png" alt="Slide 2" loading="lazy" /></div>
+        <div class="deck__slide"><img src="assets/deck/slide-3.png" alt="Slide 3" loading="lazy" /></div>
+        <div class="deck__slide"><img src="assets/deck/slide-4.png" alt="Slide 4" loading="lazy" /></div>
+        <div class="deck__slide"><img src="assets/deck/slide-5.png" alt="Slide 5" loading="lazy" /></div>
+        <div class="deck__slide"><img src="assets/deck/slide-6.png" alt="Slide 6" loading="lazy" /></div>
+        <div class="deck__slide"><img src="assets/deck/slide-7.png" alt="Slide 7" loading="lazy" /></div>
+        <div class="deck__slide"><img src="assets/deck/slide-8.png" alt="Slide 8" loading="lazy" /></div>
+        <div class="deck__slide"><img src="assets/deck/slide-9.png" alt="Slide 9" loading="lazy" /></div>
+      </div></div>
+      <div class="deck__bar">
+        <div class="deck__dots" id="deckDots"></div>
+        <div class="deck__btns"><button class="icon-btn" id="deckPrev" aria-label="previous">‹</button><button class="icon-btn" id="deckNext" aria-label="next">›</button></div>
+      </div>
+    </div>
+    <p class="proof-row"><span class="proof todo">Proof of work · Mei · add Gamma share link + build chat</span></p>
+  </section>
+
+  <!-- THE ASK -->
+  <section class="block" id="ask">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Why Now · The Ask</p>
+    <h2>Join us in building the future of accountability.</h2>
+    <p class="lede">Conversational AI is finally fast, cheap and hyper-realistic, so a personalized executive assistant can now scale to millions. From passive digital trackers to proactive AI agents.</p>
+    <div class="statrow">
+      <div class="stat"><div class="stat__num">$500K</div><div class="stat__label">Raising pre-seed</div></div>
+      <div class="stat"><div class="stat__num">10K</div><div class="stat__label">Active users target within 12 months</div></div>
+    </div>
+    <p class="dim">Use of funds: AI voice API integration, product development, and initial marketing.</p>
+  </section>
+
+  <div class="divider"><span>Behind the Build</span></div>
+
+  <!-- HOW WE BUILT IT -->
+  <section class="block" id="tools">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.4-.6-.6-2.4 2.1-2.1Z"/></svg> How We Built It · 4+ tools, each where it fits</p>
+    <h2>One company. Four people. Every step with AI.</h2>
+    <p class="lede">The grade rewards <em>which AI tools you chose and why</em>. We used eight distinct ones, each where it's strongest, across the team.</p>
+    <div class="tools">
+      <div class="tool"><div class="tool__name">Claude · Claude Code</div><div class="tool__who">Yam · video</div><div class="tool__for">Orchestration, a multi-agent research team, storyboarding and prompt engineering, driving the whole edit.</div></div>
+      <div class="tool"><div class="tool__name">Claude Cowork</div><div class="tool__who">Mia · Part 8</div><div class="tool__for">A reusable company skill wired to WISP's brand and process.</div></div>
+      <div class="tool"><div class="tool__name">Higgsfield</div><div class="tool__who">Yam · video</div><div class="tool__for">Cinema Studio (video), Nano Banana Pro (keyframes), Seed Audio (generated persona voices).</div></div>
+      <div class="tool"><div class="tool__name">Gamma</div><div class="tool__who">Mei · deck</div><div class="tool__for">The nine-slide pitch deck, built with AI.</div></div>
+      <div class="tool"><div class="tool__name">Perplexity</div><div class="tool__who">Mei · market</div><div class="tool__for">Sourced market and competitor research with links we can point to.</div></div>
+      <div class="tool"><div class="tool__name">ChatGPT</div><div class="tool__who">Mei</div><div class="tool__for">Drafting and analysis alongside the research.</div></div>
+      <div class="tool"><div class="tool__name">Gemini</div><div class="tool__who">team</div><div class="tool__for">Research, and turning the team's WhatsApp thread into the working product brief.</div></div>
+      <div class="tool"><div class="tool__name">Adobe</div><div class="tool__who">Ido · logo</div><div class="tool__for">The AI-generated WISP flame-drop mark and wordmark.</div></div>
+    </div>
+    <p class="src-note">Supporting craft, not counted as AI tools: ffmpeg and ImageMagick for the edit and pixel-level compositing, Mixkit for free-license music and sound effects.</p>
+  </section>
+
+  <!-- PROMPT LOG & EVIDENCE -->
+  <section class="block" id="prompts">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg> Prompt Log &amp; Evidence · one per deliverable</p>
+    <h2>Every part shows its work.</h2>
+    <p class="lede">The brief asks for proof of work on each part, a shared chat or a screen recording, plus prompt journeys with their corrections. Each teammate attaches their own section’s log, same as everyone.</p>
+    <div class="evidence">
+      <div class="ev"><span class="ev__part">1 · Name + Logo</span><span class="ev__who">Ido</span><span class="proof todo">add Adobe chat / screen recording</span></div>
+      <div class="ev"><span class="ev__part">2 · Marketing &amp; Content</span><span class="ev__who">Mia</span><span class="proof todo">add chat / screen recording</span></div>
+      <div class="ev"><span class="ev__part">3 · Market &amp; Competitor</span><span class="ev__who">Mei</span><a class="proof" href="#market">sources listed on the page →</a> <span class="proof todo">add research chat</span></div>
+      <div class="ev"><span class="ev__part">4 · Video / Ad</span><span class="ev__who">Yam</span><a class="proof" href="https://github.com/yayayam-uxui/naas-this-year/blob/main/00-PROMPT-LOG.md" target="_blank" rel="noopener">prompt log →</a> <a class="proof" href="assets/video/wisp-process.mp4" target="_blank" rel="noopener">screen recording →</a></div>
+      <div class="ev"><span class="ev__part">5 · Pitch Deck</span><span class="ev__who">Mei</span><span class="proof todo">add Gamma share link + chat</span></div>
+      <div class="ev"><span class="ev__part">8 · Cowork Build</span><span class="ev__who">Mia</span><span class="proof todo">add Cowork conversation link</span></div>
+      <div class="ev"><span class="ev__part">★ Stretch Zone</span><span class="ev__who">Yam</span><a class="proof" href="#stretch">documented on the page →</a></div>
+    </div>
+    </section>
+
+  <!-- REFLECTION -->
+  <section class="block" id="reflection">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg> Reflection · one each, in our own words</p>
+    <h2>Reflection is personal. Each of us writes our own.</h2>
+    <p class="lede">What we tried, what didn't work, what we chose and why, the experience of the process, and at least two AI mistakes we caught and fixed. A fabricated fact is an integrity issue, not an AI mistake, so we verified before shipping.</p>
+    <div class="reflect">
+      <div class="reflect__member">
+        <div class="reflect__head"><span class="reflect__name">Yam</span><span class="reflect__part">Video / Ad · Stretch · Landing page</span></div>
+        <p>Directing the ad in live ping-pong meant the hardest calls were mine: reading a friend's confusion as a real signal, root-causing a broken keyframe pair instead of re-prompting it away, and refusing a cloned celebrity voice on principle. The four AI mistakes I caught and overruled on the video track:</p>
+        <div class="mistakes">
+      <div class="mistake"><div class="mn">#1</div><p><b>Claim:</b> Higgsfield produces an ad-ready 60s video “with no post-production.” <b>Caught:</b> 3 verification agents refuted it (0 to 3); presets cap at 12 to 15s. <b>Fixed:</b> treated it as a shot generator feeding a real edit.</p></div>
+      <div class="mistake"><div class="mn">#2</div><p><b>Claim:</b> Specific Israel pricing for Google AI tiers. <b>Caught:</b> not on any official page. <b>Fixed:</b> struck all invented numbers; used only the live credit balance.</p></div>
+      <div class="mistake"><div class="mn">#3</div><p><b>Claim:</b> The catalog implied only an animated-explainer workflow. <b>Caught:</b> queried the model layer directly. <b>Fixed:</b> found the presets that anchored the plan.</p></div>
+      <div class="mistake"><div class="mn">#4</div><p><b>Claim:</b> The image model silently rewrote every scene into a portrait. <b>Caught:</b> diffed sent vs. returned prompt; Yam spotted the drift. <b>Fixed:</b> pivoted engines, 16 of 16 keyframes correct.</p></div>
+    </div>
+      </div>
+      <div class="reflect__member">
+        <div class="reflect__head"><span class="reflect__name">Mia</span><span class="reflect__part">Marketing &amp; Content · Cowork Build</span></div>
+        <div class="ph"><span class="ph__tag">owner · Mia</span> Your reflection on your own part: what you tried, what didn't work, what you chose and why, how the process felt, and two AI mistakes you caught and fixed. <span class="ph__owner">Mia to write</span></div>
+      </div>
+      <div class="reflect__member">
+        <div class="reflect__head"><span class="reflect__name">Mei</span><span class="reflect__part">Pitch Deck · Market Analysis</span></div>
+        <div class="ph"><span class="ph__tag">owner · Mei</span> Your reflection on your own part: what you tried, what didn't work, what you chose and why, how the process felt, and two AI mistakes you caught and fixed. <span class="ph__owner">Mei to write</span></div>
+      </div>
+      <div class="reflect__member">
+        <div class="reflect__head"><span class="reflect__name">Ido</span><span class="reflect__part">Name &amp; Logo · Brand</span></div>
+        <div class="ph"><span class="ph__tag">owner · Ido</span> Your reflection on your own part: what you tried, what didn't work, what you chose and why, how the process felt, and two AI mistakes you caught and fixed. <span class="ph__owner">Ido to write</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRETCH ZONE -->
+  <section class="block" id="stretch">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> The Stretch Zone · two roles we never staffed · 30% of the grade</p>
+    <h2>Hiring for jobs with no template.</h2>
+    <p class="lede">All semester we hired standard roles. The Stretch Zone asks us to hire two more with no template, where judgment and original thinking show up. This is Yam's second deliverable.</p>
+    <div class="roles">
+      <div class="role role--wide">
+        <div class="badge">Role 1 · everyone builds this</div>
+        <h3>New-Hire Onboarding Plan · the WISP Day-One Handbook</h3>
+        <p>WISP does not hand a new teammate a PDF. WISP <b>calls them</b>. The onboarding is the product: a voice-forward company that onboards its own people by voice, so this page is the map and the calls are the territory. One detail we are proud of: WISP knows you are an <b>employee, not a user</b>. The moment you were hired you became a new category in the system, so your first call is an onboarding call, not a nudge.</p>
+        <div class="callclip callclip--video">
+          <div class="callclip__head"><svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg> Your Day-1 welcome call</div>
+          <div class="vcall">
+            <div class="vcall__stage">
+              <button class="vcall__circle" id="welcomeVideoBtn" type="button" aria-label="Play the welcome call">
+                <video id="welcomeVideo" class="vcall__video" src="assets/video/welcome-call.mp4" playsinline preload="metadata"></video>
+                <span class="vcall__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg></span>
+              </button>
+              <div class="vcall__actions">
+                <button class="call-btn decline" id="welcomeHangup" type="button" aria-label="Hang up"><svg class="ico" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+                <button class="call-btn accept" id="welcomeAnswer" type="button" aria-label="Answer"><svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg></button>
+              </div>
+            </div>
+            <p class="vcall__caption" id="welcomeCaption"></p>
+          </div>
+        </div>
+        <h4>Word from the founder</h4>
+        <div class="callclip callclip--mini callclip--bare">
+          <div class="acall">
+            <button class="acall__btn" id="founderBtn" type="button" aria-label="Play the founder's word">
+              <svg class="ico acall__play" viewBox="0 0 24 24"><polygon points="8 5 19 12 8 19 8 5"/></svg>
+              <svg class="ico acall__pause" viewBox="0 0 24 24"><rect x="7" y="5" width="3.5" height="14" rx="1"/><rect x="13.5" y="5" width="3.5" height="14" rx="1"/></svg>
+            </button>
+            <audio id="founderAudio" src="assets/audio/founder-word.mp3" preload="metadata"></audio>
+            <div class="acall__body">
+              <p class="acall__caption" id="founderCaption"></p>
+            </div>
+          </div>
+        </div>
+        <h4>Who we are · the customer · the product</h4>
+        <ul>
+          <li>We replace the ignorable push notification with a live voice call. We don't remind you, we move you.</li>
+          <li>Customer: the Unbossed Hustler (isolated freelancers and solo founders) and the Procrastinating Student.</li>
+          <li>Four personas at onboarding: Tough Love, The Pragmatist, Supportive Partner, Ego Pumper. The loop: Set Goal, AI Call, Take Action, Report.</li>
+        </ul>
+        <h4>Brand voice (the non-negotiables)</h4>
+        <ul>
+          <li>Always: “Right now.” · “I've got you.” · “You said this mattered.” · “Let's go.”</li>
+          <li>Never: “Just a friendly reminder…” · “Whenever you get a chance…” · “Sorry to bother you…”</li>
+        </ul>
+        <h4>How we work</h4>
+        <ul>
+          <li><b>AI-native, AI-reflexive:</b> when you hit a problem, your first instinct is to reach for AI, fast.</li>
+          <li><b>Coffee-forward:</b> the best ideas do not happen in meetings, they happen over coffee. In your first days you book a 30-minute coffee with a teammate, and then keep booking them.</li>
+          <li><b>Tools:</b> Claude Code and Cowork, ElevenLabs and Higgsfield (voice and video), Gamma, Perplexity and Gemini. Reach for the one that fits, fast.</li>
+          <li><b>Good work here:</b> show the process, verify before you ship, one company one look.</li>
+        </ul>
+        <h4>Your first days (you live in the product)</h4>
+        <ul>
+          <li><b>WISP calls you</b>, the acceptance call above, then its walkthrough.</li>
+          <li><b>Dogfood WISP for real:</b> run a genuine personal goal through the product for 10+ hours, feel all four personas, and miss one goal on purpose, so you feel what our user feels.</li>
+          <li><b>Listen to real user calls</b> before you touch anything.</li>
+          <li><b>Book the coffees.</b> Whatever else you need, you ask and we get it.</li>
+        </ul>
+        <h4>Layer 2 · tailored, because our first hire is a Growth Engineer</h4>
+        <p>The handbook above is for anyone who joins. This layer is for the role we hired first. You own <b>activation</b>: getting a new user to complete their first AI call and act on it. You inherit the product, but you can change it wherever that moves activation. Your ramp flows straight into your 30/60/90 plan, in Role 2.</p>
+      </div>
+      <div class="role role--wide">
+        <span class="rec"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> our pick for Role 2</span>
+        <div class="badge">Role 2 · First Hire — Growth Engineer</div>
+        <h3>The one human WISP hires first.</h3>
+        <p>Deciding the first hire is deciding the one thing the founder cannot do alone. Not more marketing. It is turning WISP's own AI into a repeatable engine that gets strangers to pick up, trust, and act on their first voice call.</p>
+        <h4>The role, and why we found it</h4>
+        <p>In 2023 the <b>GTM Engineer</b> appeared, coined by Clay: one technical builder plus AI doing the work of a whole revenue-ops team. Demand jumped about 205% year over year into 2025. But that role is B2B outbound, and WISP is B2C and product-led, so we hire its consumer cousin, the <b>Growth Engineer</b>. Same DNA (automation, data, experimentation), aimed at a consumer funnel. Adapting a brand-new role is the judgment call, not a title from class.</p>
+        <h4>Why first, not fifth</h4>
+        <p>An AI-native product that instruments its funnel from day one never has to untangle a frankenstack later. And the economics are the whole point of a one-person unicorn: before you hire five SDRs, ask whether one Growth Engineer plus AI can build the machine they would only operate.</p>
+        <h4>The mandate</h4>
+        <p>Own activation: get a new user to complete their first AI call and act on it, fast, and keep them. Inherit the product, and change it wherever that moves activation.</p>
+        <h4>The job — what you own</h4>
+        <ul>
+          <li>Instrument the funnel (signup, activation, retention, referral) and make it measurable.</li>
+          <li>Build onboarding and lifecycle automation across push, SMS, email, in-app.</li>
+          <li>Ship product changes to the activation surface, and run the experiment loop.</li>
+          <li>Must-have: SQL, one automation tool, LLM fluency, a commercial mindset, a tinkerer's instinct. Credentials optional.</li>
+        </ul>
+        <h4>How we interview (the real questions)</h4>
+        <ul>
+          <li>“A user signs up but never completes their first call. You have our data. What three things do you instrument, and what is your first experiment?”</li>
+          <li>“Show me the last thing you built where AI did the real work. Where did it get things wrong, and how did you catch it?”</li>
+          <li>“Changing the first call's script lifts activation, but the founder loves the current script. How do you handle it?”</li>
+        </ul>
+        <h4>The first 90 days</h4>
+        <ul>
+          <li><b>0–30:</b> onboard the WISP way, instrument the funnel, and validate which persona actually activates, turning our directional ICP into a data-backed one.</li>
+          <li><b>31–60:</b> automate the onboarding and lifecycle nudges that carry a user to their first call within 24 hours; ship the first product changes that cut time-to-first-call.</li>
+          <li><b>61–90:</b> stand up the A/B experiment loop and report the first activation lift; launch WISP's first referral loop.</li>
+        </ul>
+      </div>
+      <div class="role">
+        <div class="badge">Cool AI tools to build it with</div>
+        <h3>Self-found tools score.</h3>
+        <p>The Day-1 acceptance call is a real, original AI voice:</p>
+        <div class="toolchips"><span class="toolchip">ElevenLabs</span><span class="toolchip">Vapi</span><span class="toolchip">Retell AI</span></div>
+        <p style="margin-top:0.85rem">And the Growth Engineer's stack, the engine behind activation:</p>
+        <div class="toolchips"><span class="toolchip">Clay</span><span class="toolchip">n8n</span><span class="toolchip">Segment</span><span class="toolchip">Amplitude</span><span class="toolchip">PostHog</span><span class="toolchip">Braze</span></div>
+      </div>
+      <div class="role">
+        <div class="badge">Alternatives we considered for Role 2</div>
+        <h3>Why not the others.</h3>
+        <ul>
+          <li><b>Customer Success:</b> strong on retention, but a human-run support function reads off-brand for a product whose whole promise is elite AI voice.</li>
+          <li><b>Go-To-Market (traditional):</b> overlaps the marketing brief we already built.</li>
+          <li><b>Business Model:</b> great for the investor story, more analytical than product.</li>
+        </ul>
+        <p class="dim" style="margin-top:0.7rem;font-size:0.82rem">Documented in the Stretch Zone conversation log and prompt log.</p>
+      </div>
+    </div>
+</section>
+
+  <!-- COWORK -->
+  <section class="block" id="cowork">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg> The Cowork Build · Part 8 · owner Mia</p>
+    <h2>A skill wired to WISP.</h2>
+    <div class="ph"><span class="ph__tag">Coming from Mia</span> A custom Claude Cowork skill that encodes WISP's brand voice or a repeating process, created and exported by Mia. The conversation and what it produces will live here. <span class="ph__owner">owner: Mia</span></div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="block" id="team">
+    <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Who Did What · Part 9 · each of us, in our own words</p>
+    <h2>The team.</h2>
+    <p class="lede">Each member writes, in their own words, what they built, which tools they personally used, and one thing they learned about working with AI.</p>
+    <div class="team-grid">
+      <div class="member"><div class="member__photo"><img src="assets/team/mia.jpg" alt="Mia Nedivi" loading="lazy" /></div><div class="member__body"><div class="member__name">Mia Nedivi</div><div class="member__role">Marketing &amp; Content · Cowork Build</div><div class="member__stmt">What I built, which tools I personally used, and one thing I learned about working with AI. <span class="dim">(Mia to complete.)</span></div></div></div>
+      <div class="member"><div class="member__photo"><img src="assets/team/yam.jpg" alt="Yam Meir" loading="lazy" /></div><div class="member__body"><div class="member__name">Yam Meir</div><div class="member__role">Video / Ad · Stretch Zone · Landing Page</div><div class="member__stmt">Directed the 60-second ad through eight live iterations, built the Stretch Zone, and designed and built this landing-page submission, every step in ping-pong with Claude Code. <span class="dim">(Yam to expand.)</span></div></div></div>
+      <div class="member"><div class="member__photo"><img src="assets/team/mei.jpg" alt="Mei Sadot" loading="lazy" /></div><div class="member__body"><div class="member__name">Mei Sadot</div><div class="member__role">Pitch Deck · Market Analysis</div><div class="member__stmt">What I built, which tools I personally used, and one thing I learned about working with AI. <span class="dim">(Mei to complete.)</span></div></div></div>
+      <div class="member"><div class="member__photo"><img src="assets/team/ido.png" alt="Ido Omer" loading="lazy" /></div><div class="member__body"><div class="member__name">Ido Omer</div><div class="member__role">Name &amp; Logo · Brand</div><div class="member__stmt">What I built, which tools I personally used, and one thing I learned about working with AI. <span class="dim">(Ido to complete.)</span></div></div></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p>We Don't Remind You. We Move You.</p>
+    <p class="fine">One Person Unicorn · ShaniAI · Reichman University. Built end-to-end with AI by Mia, Yam, Mei &amp; Ido. No real person's voice was cloned; the narrator is an original generated voice. Music and sound effects: Mixkit Free License.</p>
+    <a class="side-repo" href="https://github.com/yayayam-uxui/naas-this-year" target="_blank" rel="noopener">↗ the live process repo</a>
+  </footer>
+
+</main>
+
+<script src="app.js"></script>
+  <script src="assets/captions.js" defer></script>
+</body>
+</html>
