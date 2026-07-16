@@ -339,11 +339,6 @@ details.entry[open] summary .chev { transform: rotate(90deg); color: var(--accen
 .script__shots li i { color: var(--ink); font-style: italic; }
 .script__shots .sup { font-size: 0.74rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-dim); }
 
-/* ============ SIGNATURES (Part 9) ============ */
-.who__sign { margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--line); display: flex; align-items: baseline; gap: 0.6rem; }
-.who__sign span { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-dim); }
-.who__sign b { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; color: var(--ink); }
-
 /* ============ NAME STORY (Ido) ============ */
 .brandquote { margin-top: 0.9rem; font-size: 0.88rem; color: var(--ink-soft); line-height: 1.6; border-left: 2px solid var(--accent); padding-left: 0.9rem; }
 .brandquote em { color: var(--ink); font-style: italic; }
