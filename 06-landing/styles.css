@@ -324,17 +324,33 @@ details.entry[open] summary .chev { transform: rotate(90deg); color: var(--accen
 .ph .ph__tag { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--p2); margin-right: 0.4rem; }
 .ph .ph__owner { color: var(--accent); font-weight: 600; }
 
-/* ============ TEAM (2 per row, room for a real statement) ============ */
-.team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.8rem; }
-.member { display: flex; gap: 1.15rem; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.15rem; transition: all .2s var(--ease); }
-.member:hover { border-color: var(--accent); }
-.member__photo { width: 92px; flex-shrink: 0; aspect-ratio: 1; overflow: hidden; border-radius: 10px; }
-.member__photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.05); transition: filter .4s var(--ease); }
-.member:hover .member__photo img { filter: grayscale(12%); }
-.member__body { flex: 1; min-width: 0; }
-.member__name { font-weight: 600; color: var(--ink); font-size: 1.08rem; }
-.member__role { font-size: 0.66rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); margin-top: 0.2rem; }
-.member__stmt { color: var(--ink-soft); font-size: 0.86rem; margin-top: 0.65rem; }
+/* ============ WHO DID WHAT · one section per person ============ */
+.who { display: grid; gap: 1rem; margin-top: 1.8rem; }
+.who__member { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.3rem 1.4rem; transition: border-color .2s var(--ease); }
+.who__member:hover { border-color: var(--accent); }
+.who__head { display: flex; align-items: center; gap: 0.95rem; margin-bottom: 0.9rem; }
+.who__photo { width: 56px; flex: 0 0 56px; align-self: flex-start; aspect-ratio: 1; overflow: hidden; border-radius: 50%; }
+.who__photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.05); transition: filter .4s var(--ease); }
+.who__member:hover .who__photo img { filter: grayscale(12%); }
+.who__id { min-width: 0; }
+.who__name { font-family: var(--serif); font-size: 1.35rem; color: var(--ink); line-height: 1.2; }
+.who__role { font-size: 0.64rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); margin-top: 0.25rem; }
+.who__stmt { color: var(--ink-soft); font-size: 0.9rem; line-height: 1.6; max-width: 68ch; }
+.who__stmt p + p { margin-top: 0.7rem; }
+.who__stmt b { color: var(--ink); font-weight: 600; }
+.who__stmt i { color: var(--ink); font-style: italic; }
+.who__stmt .ph { margin-top: 0; }
+
+/* ---------- marketing brief (Mia) ---------- */
+.mk-brief { margin-top: 1rem; }
+.mk-brief__h { font-family: var(--serif); font-size: 1.3rem; color: var(--ink); font-weight: 400; margin-bottom: 0.9rem; }
+.mk-brief__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
+.mk-hook { margin-top: 0.6rem; font-family: var(--serif); font-size: 1.05rem; color: var(--accent); line-height: 1.4; }
+.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
+.pillar { background: var(--panel); border: 1px solid var(--line); border-left: 2px solid var(--accent); border-radius: 8px; padding: 1rem 1.1rem; }
+.pillar__n { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+.pillar__b { font-size: 0.86rem; color: var(--ink-soft); line-height: 1.55; }
+.pillar__b b { color: var(--ink); font-weight: 600; }
 
 /* footer */
 .foot { max-width: 820px; margin-inline: auto; padding: 3rem clamp(1.4rem, 4vw, 3rem); }
@@ -403,7 +419,7 @@ details.entry[open] summary .chev { transform: rotate(90deg); color: var(--accen
   .sidebar.open { transform: none; }
   .side-toggle { display: block; }
   .content { margin-left: 0; }
-  .tools, .roles, .team-grid, .mk-grid { grid-template-columns: 1fr; }
+  .tools, .roles, .mk-grid, .mk-brief__grid, .pillars { grid-template-columns: 1fr; }
   .brandrow { grid-template-columns: 1fr; }
   .hero__grid { grid-template-columns: 1fr; gap: 2.4rem; }
   .call-card { max-width: 340px; }
@@ -419,8 +435,8 @@ details.entry[open] summary .chev { transform: rotate(90deg); color: var(--accen
 }
 @media (max-width: 560px) {
   .statrow { gap: 1.6rem; }
-  .member { flex-direction: column; }
-  .member__photo { width: 84px; }
+  .who__photo { width: 46px; flex-basis: 46px; }
+  .who__name { font-size: 1.2rem; }
 }
 /* ---------- mobile-only "best on desktop" banner ---------- */
 .m-banner { display: none; }

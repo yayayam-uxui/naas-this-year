@@ -209,7 +209,25 @@
         </ul>
       </div>
     </div>
-    <div class="ph"><span class="ph__tag">owner · Mia</span> The strategic marketing brief, the positioning and channel plan behind the calendar, drops in here. <span class="ph__owner">Mia to add</span></div>
+    <div class="mk-brief">
+      <h4 class="mk-brief__h">The marketing brief</h4>
+      <div class="mk-brief__grid">
+        <div class="mk-card">
+          <h4>The core hook · the enemy</h4>
+          <p>The Enemy is the Passive Notification: the swipe-away banner with a 4.19% open rate that quietly gives users permission to ignore their own goals.</p>
+          <p class="mk-hook">“95.81% of the time, your phone lets you off the hook. We don't.”</p>
+        </div>
+        <div class="mk-card">
+          <h4>Positioning statement</h4>
+          <p>NaaS is the AI Executive Assistant that replaces the ignorable push notification with a live voice call, because procrastination was never a discipline problem: it was an interruption problem that text could never solve. We turn “I'll do it later” into “I'm doing it now,” one uncompromising phone call at a time.</p>
+        </div>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><div class="pillar__n">Pillar 1</div><div class="pillar__b"><b>The Case Against Passive.</b> The data and psychology behind why text nudges and gamified checklists fail. Builds trust through evidence.</div></div>
+        <div class="pillar"><div class="pillar__n">Pillar 2</div><div class="pillar__b"><b>Meet Your Assistant.</b> Real call teasers across the 4 Nudging Styles. Builds demand through personality and curiosity.</div></div>
+        <div class="pillar"><div class="pillar__n">Pillar 3</div><div class="pillar__b"><b>Executed, Not Excused.</b> Real use-case stories from Unbossed Hustlers and Procrastinating Students. Builds trust through social proof.</div></div>
+      </div>
+    </div>
     <div class="cal">
       <div class="cal__title">March 2026 · illustrative launch month · twelve posts, real copy, click a day</div>
       <div class="cal__legend"><span><i class="p1"></i>The Case Against Passive</span><span><i class="p2"></i>Meet Your Assistant</span><span><i class="p3"></i>Executed, Not Excused</span></div>
@@ -257,7 +275,7 @@
         <div class="deck__btns"><button class="icon-btn" id="deckPrev" aria-label="previous">‹</button><button class="icon-btn" id="deckNext" aria-label="next">›</button></div>
       </div>
     </div>
-    <p class="proof-row"><span class="proof todo">Proof of work · Mei · add Gamma share link + build chat</span></p>
+    <p class="proof-row"><a class="proof" href="https://gamma.app/docs/We-Dont-Remind-You-We-Move-You-gg4j69uwiuop2vd" target="_blank" rel="noopener">the deck on Gamma →</a> <a class="proof" href="https://chatgpt.com/share/6a5798c8-0c94-83eb-809a-737093d4508b" target="_blank" rel="noopener">the build chat →</a></p>
   </section>
 
   <!-- THE ASK -->
@@ -301,9 +319,9 @@
     <div class="evidence">
       <div class="ev"><span class="ev__part">1 · Name + Logo</span><span class="ev__who">Ido</span><span class="proof todo">add Adobe chat / screen recording</span></div>
       <div class="ev"><span class="ev__part">2 · Marketing &amp; Content</span><span class="ev__who">Mia</span><span class="proof todo">add chat / screen recording</span></div>
-      <div class="ev"><span class="ev__part">3 · Market &amp; Competitor</span><span class="ev__who">Mei</span><a class="proof" href="#market">sources listed on the page →</a> <span class="proof todo">add research chat</span></div>
+      <div class="ev"><span class="ev__part">3 · Market &amp; Competitor</span><span class="ev__who">Mei</span><a class="proof" href="#market">sources listed on the page →</a> <a class="proof" href="https://www.perplexity.ai/search/ceb2b9ec-6f7a-4bc1-9de4-9577e0a49c59" target="_blank" rel="noopener">the Perplexity research →</a></div>
       <div class="ev"><span class="ev__part">4 · Video / Ad</span><span class="ev__who">Yam</span><a class="proof" href="https://github.com/yayayam-uxui/naas-this-year/blob/main/00-PROMPT-LOG.md" target="_blank" rel="noopener">prompt log →</a> <a class="proof" href="assets/video/wisp-process.mp4" target="_blank" rel="noopener">screen recording →</a></div>
-      <div class="ev"><span class="ev__part">5 · Pitch Deck</span><span class="ev__who">Mei</span><span class="proof todo">add Gamma share link + chat</span></div>
+      <div class="ev"><span class="ev__part">5 · Pitch Deck</span><span class="ev__who">Mei</span><a class="proof" href="https://gamma.app/docs/We-Dont-Remind-You-We-Move-You-gg4j69uwiuop2vd" target="_blank" rel="noopener">the deck on Gamma →</a> <a class="proof" href="https://chatgpt.com/share/6a5798c8-0c94-83eb-809a-737093d4508b" target="_blank" rel="noopener">the build chat →</a></div>
       <div class="ev"><span class="ev__part">8 · Cowork Build</span><span class="ev__who">Mia</span><span class="proof todo">add Cowork conversation link</span></div>
       <div class="ev"><span class="ev__part">★ Stretch Zone</span><span class="ev__who">Yam</span><a class="proof" href="#stretch">documented on the page →</a></div>
     </div>
@@ -327,11 +345,18 @@
       </div>
       <div class="reflect__member">
         <div class="reflect__head"><span class="reflect__name">Mia</span><span class="reflect__part">Marketing &amp; Content · Cowork Build</span></div>
-        <div class="ph"><span class="ph__tag">owner · Mia</span> Your reflection on your own part: what you tried, what didn't work, what you chose and why, how the process felt, and two AI mistakes you caught and fixed. <span class="ph__owner">Mia to write</span></div>
+        <p>For my part of Wisp, my job as CMO and Copywriter was to give the brand its marketing strategy and its voice. I started with fairly generic content ideas: safe lines like “stay accountable” or “build better habits” before realizing that was exactly the trap our own research pointed at: passive reminders barely get opened at all (4.19%, to be exact), so generic marketing language would fail the users for the same reason the product itself was built to fix. I chose to build our whole strategy around that contrast instead: Wisp isn't another quiet app, it's the one that actually calls you. That meant rejecting the AI's first instincts more than once: its early notification drafts came back soft and polite, something like “just a friendly reminder,” and I had to manually rebuild the tone around our Tough Love, Executive Assistant persona before it actually sounded like us instead of every other app in the category.</p>
+        <div class="mistakes">
+          <div class="mistake"><div class="mn">#1</div><p>When I asked for a full month's content calendar, the AI filled several posts with bracketed placeholders like “[insert stat here]” instead of finished, publishable copy. I caught it because the whole point of the deliverable was real, ready-to-run content, not a draft, so I rejected those posts and had it rewritten with specific, concrete details instead.</p></div>
+          <div class="mistake"><div class="mn">#2</div><p>When I asked for a copy across our four nudging styles, the AI wrote Tough Love, Pragmatist, Supportive Partner, and Ego Pumper as if they were four separate, unrelated brands rather than one company speaking in four registers. I caught the inconsistency by reading them side by side, and fixed it by building a strict Persona Adaptability Matrix, one formatting rule per style, so every version still sounded exactly like Wisp.</p></div>
+        </div>
       </div>
       <div class="reflect__member">
         <div class="reflect__head"><span class="reflect__name">Mei</span><span class="reflect__part">Pitch Deck · Market Analysis</span></div>
-        <div class="ph"><span class="ph__tag">owner · Mei</span> Your reflection on your own part: what you tried, what didn't work, what you chose and why, how the process felt, and two AI mistakes you caught and fixed. <span class="ph__owner">Mei to write</span></div>
+        <div class="mistakes">
+          <div class="mistake"><div class="mn">#1</div><p><b>AI misattributing financial data to an irrelevant source (Hallucination).</b> <b>What the AI said:</b> When researching the market opportunity using Perplexity AI, the tool accurately stated the productivity market size ($13.15B). However, in its source list, it linked this financial data to a random blog post about “8 Habitica Alternatives” rather than a valid financial report. <b>How I caught it:</b> I manually clicked and audited every single link the AI generated for our “Proof of Work” section to ensure the sources actually contained the data claimed. <b>How I fixed/overruled the tool:</b> I completely discarded the AI's hallucinated link. I then ran a manual, targeted Google search for the specific $13.15B figure and found the true, credible source (a report by Business Research Insights), manually replacing the link in our final document.</p></div>
+          <div class="mistake"><div class="mn">#2</div><p><b>AI image generators producing gibberish text (Visual Hallucination).</b> <b>What the AI said:</b> When generating images for our Pitch Deck in Gamma.app, the AI included nonsensical text like ‘DICUEAI’ and ‘WERNO ENCQUUANING’ on the character personas. <b>How I caught it:</b> I reviewed each slide visually to ensure it met professional standards before finalizing the deck. <b>How I fixed/overruled the tool:</b> I manually replaced the hallucinated images and modified our prompts in Gamma to explicitly forbid any text or letters in the generated imagery, demanding clean, abstract visuals instead.</p></div>
+        </div>
       </div>
       <div class="reflect__member">
         <div class="reflect__head"><span class="reflect__name">Ido</span><span class="reflect__part">Name &amp; Logo · Brand</span></div>
@@ -471,11 +496,52 @@
     <p class="eyebrow"><svg class="ico" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Who Did What · Part 9 · each of us, in our own words</p>
     <h2>The team.</h2>
     <p class="lede">Each member writes, in their own words, what they built, which tools they personally used, and one thing they learned about working with AI.</p>
-    <div class="team-grid">
-      <div class="member"><div class="member__photo"><img src="assets/team/mia.jpg" alt="Mia Nedivi" loading="lazy" /></div><div class="member__body"><div class="member__name">Mia Nedivi</div><div class="member__role">Marketing &amp; Content · Cowork Build</div><div class="member__stmt">What I built, which tools I personally used, and one thing I learned about working with AI. <span class="dim">(Mia to complete.)</span></div></div></div>
-      <div class="member"><div class="member__photo"><img src="assets/team/yam.jpg" alt="Yam Meir" loading="lazy" /></div><div class="member__body"><div class="member__name">Yam Meir</div><div class="member__role">Video / Ad · Stretch Zone · Landing Page</div><div class="member__stmt">Directed the 60-second ad through eight live iterations, built the Stretch Zone, and designed and built this landing-page submission, every step in ping-pong with Claude Code. <span class="dim">(Yam to expand.)</span></div></div></div>
-      <div class="member"><div class="member__photo"><img src="assets/team/mei.jpg" alt="Mei Sadot" loading="lazy" /></div><div class="member__body"><div class="member__name">Mei Sadot</div><div class="member__role">Pitch Deck · Market Analysis</div><div class="member__stmt">What I built, which tools I personally used, and one thing I learned about working with AI. <span class="dim">(Mei to complete.)</span></div></div></div>
-      <div class="member"><div class="member__photo"><img src="assets/team/ido.png" alt="Ido Omer" loading="lazy" /></div><div class="member__body"><div class="member__name">Ido Omer</div><div class="member__role">Name &amp; Logo · Brand</div><div class="member__stmt">What I built, which tools I personally used, and one thing I learned about working with AI. <span class="dim">(Ido to complete.)</span></div></div></div>
+    <div class="who">
+
+      <article class="who__member">
+        <div class="who__head">
+          <div class="who__photo"><img src="assets/team/mia.jpg" alt="Mia Nedivi" loading="lazy" /></div>
+          <div class="who__id"><div class="who__name">Mia Nedivi</div><div class="who__role">Marketing &amp; Content · Cowork Build</div></div>
+        </div>
+        <div class="who__stmt">
+          <p>As a first-year Business Administration &amp; Entrepreneurship student, this project was my first real test of directing AI tools instead of just using them. While working for “Wisp” as CMO and Copywriter, I built our marketing strategy: three target audience segments, a Brand Voice Guide built around our “premium Executive Assistant” ethos, and a complete one-month social media calendar: twelve fully written, ready-to-post captions.</p>
+          <p>I used Claude to build and refine the actual content calendar, going back and forth until the tone held steady across all twelve posts and matched the brand voice we'd defined.</p>
+          <p>One thing I have learned, a vague prompt gets you vague marketing. Once I stopped asking for “a social post” and started giving Claude explicit “Say This / Not That” examples and a list of banned phrases, the output finally sounded like a real brand instead of generic AI copy. That shift, from prompting to actually directing, is the skill this course taught me.</p>
+        </div>
+      </article>
+
+      <article class="who__member">
+        <div class="who__head">
+          <div class="who__photo"><img src="assets/team/yam.jpg" alt="Yam Meir" loading="lazy" /></div>
+          <div class="who__id"><div class="who__name">Yam Meir</div><div class="who__role">Video / Ad · Stretch Zone · Landing Page</div></div>
+        </div>
+        <div class="who__stmt">
+          <p>Directed the 60-second ad through eight live iterations, built the Stretch Zone, and designed and built this landing-page submission, every step in ping-pong with Claude Code. <span class="dim">(Yam to expand.)</span></p>
+        </div>
+      </article>
+
+      <article class="who__member">
+        <div class="who__head">
+          <div class="who__photo"><img src="assets/team/mei.jpg" alt="Mei Sadot" loading="lazy" /></div>
+          <div class="who__id"><div class="who__name">Mei Sadot</div><div class="who__role">Pitch Deck · Market Analysis</div></div>
+        </div>
+        <div class="who__stmt">
+          <p><b>What I built.</b> <i>Market &amp; Competitor Analysis (Part 3):</i> Defined core customer pain points using grounded data, mapped the competitive landscape, and calculated the market opportunity to build a solid business case. <i>Pitch Deck (Part 5):</i> Developed the investor presentation by engineering precise prompts to generate an 8-slide deck, ensuring a strong narrative flow and clear visual layout instructions.</p>
+          <p><b>Tools I used.</b> <i>For the Market Analysis:</i> Perplexity AI (for deep market research, sourcing financial data, and competitor mapping). <i>For the Pitch Deck:</i> Gamma.app (for automated slide generation and design) and ChatGPT/Claude (for prompt engineering, copywriting, and strict formatting constraints).</p>
+          <p><b>What I learned.</b> <i>Regarding Market Analysis:</i> I learned that AI search tools can easily hallucinate or misattribute data. Verifying every single URL manually is a mandatory step before finalizing any research. <i>Regarding the Pitch Deck:</i> I discovered that while AI is a powerful accelerator for design and structure, it requires strict operational guardrails. I had to explicitly command the AI with rigid constraints (like forbidding text on images) to prevent messy, unprofessional outputs.</p>
+        </div>
+      </article>
+
+      <article class="who__member">
+        <div class="who__head">
+          <div class="who__photo"><img src="assets/team/ido.png" alt="Ido Omer" loading="lazy" /></div>
+          <div class="who__id"><div class="who__name">Ido Omer</div><div class="who__role">Name &amp; Logo · Brand</div></div>
+        </div>
+        <div class="who__stmt">
+          <div class="ph"><span class="ph__tag">owner · Ido</span> What I built, which tools I personally used, and one thing I learned about working with AI. <span class="ph__owner">Ido to write</span></div>
+        </div>
+      </article>
+
     </div>
   </section>
 
