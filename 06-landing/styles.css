@@ -409,11 +409,27 @@ details.entry[open] summary .chev { transform: rotate(90deg); color: var(--accen
   .call-card { max-width: 340px; }
   .role.role--wide { grid-column: auto; }
   .block { padding-top: clamp(2.6rem, 8vw, 3.5rem); }
+  .hero { padding-top: 4.75rem; }              /* clear the fixed menu button over the eyebrow */
+  body { overflow-x: hidden; }                 /* safety: no stray horizontal scroll on phones */
+  .vcall { flex-wrap: wrap; }                  /* welcome-call circle + caption stack, not overflow */
+  .callclip .vcall__caption { min-width: 0; }
+  .acall { flex-wrap: wrap; }
+  table.cmp { min-width: 0; table-layout: fixed; width: 100%; }   /* the 500px min-width was stretching the whole page */
+  .cmp td, .cmp th { overflow-wrap: break-word; padding: 0.7rem 0.7rem; }
 }
 @media (max-width: 560px) {
   .statrow { gap: 1.6rem; }
   .member { flex-direction: column; }
   .member__photo { width: 84px; }
+}
+/* ---------- mobile-only "best on desktop" banner ---------- */
+.m-banner { display: none; }
+.m-banner.is-hidden { display: none !important; }
+@media (max-width: 640px) {
+  .m-banner { display: flex; align-items: center; gap: 0.7rem; position: fixed; left: 0.55rem; right: 0.55rem; bottom: 0.55rem; z-index: 200; background: var(--ink); color: var(--bg); border-radius: 12px; padding: 0.75rem 0.85rem; font-size: 0.78rem; line-height: 1.45; box-shadow: 0 12px 34px rgba(0,0,0,0.28); }
+  .m-banner b { color: #79D0C7; font-weight: 700; }
+  .m-banner span { flex: 1 1 auto; min-width: 0; }
+  .m-banner__x { margin-inline-start: auto; flex: 0 0 auto; width: 26px; height: 26px; background: rgba(255,255,255,0.14); border: none; border-radius: 50%; color: var(--bg); font-size: 1.1rem; line-height: 1; cursor: pointer; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }

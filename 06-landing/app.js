@@ -190,5 +190,11 @@
     }, 3400);
   }
 
+  /* ---------- mobile "best on desktop" banner ---------- */
+  var mBannerX = document.getElementById("mBannerX");
+  if (mBannerX) mBannerX.addEventListener("click", function () {
+    var b = document.getElementById("mBanner"); if (b) b.classList.add("is-hidden");
+  });
+
   function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
 })();
