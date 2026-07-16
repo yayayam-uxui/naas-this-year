@@ -66,6 +66,48 @@
     document.getElementById("deckNext").addEventListener("click", function () { go(idx + 1); });
   }
 
+  /* ---------- rejected logo carousel (Ido's explorations) ---------- */
+  var rTrack = document.getElementById("rejTrack");
+  if (rTrack && rTrack.children.length) {
+    var cards = Array.prototype.slice.call(rTrack.children);
+    var rDots = document.getElementById("rejDots");
+    var page = 0;
+
+    var perView = function () {
+      var vp = rTrack.parentElement.clientWidth;
+      var cw = cards[0].getBoundingClientRect().width;
+      return cw ? Math.max(1, Math.round(vp / cw)) : 1;
+    };
+    var pageCount = function () { return Math.max(1, Math.ceil(cards.length / perView())); };
+
+    var buildDots = function () {
+      rDots.innerHTML = "";
+      for (var i = 0; i < pageCount(); i++) {
+        var s = document.createElement("span");
+        s.className = i === page ? "on" : "";
+        (function (n) { s.addEventListener("click", function () { goR(n); }); })(i);
+        rDots.appendChild(s);
+      }
+    };
+    var goR = function (n) {
+      var p = pageCount();
+      page = (n + p) % p;
+      var first = cards[page * perView()] || cards[0];
+      // offsetLeft is layout-based, so it stays correct under the track's transform
+      rTrack.style.transform = "translateX(" + (-(first.offsetLeft - cards[0].offsetLeft)) + "px)";
+      Array.prototype.forEach.call(rDots.children, function (el, i) { el.classList.toggle("on", i === page); });
+    };
+    document.getElementById("rejPrev").addEventListener("click", function () { goR(page - 1); });
+    document.getElementById("rejNext").addEventListener("click", function () { goR(page + 1); });
+    buildDots(); goR(0);
+
+    var rzT;
+    window.addEventListener("resize", function () {
+      clearTimeout(rzT);
+      rzT = setTimeout(function () { page = 0; buildDots(); goR(0); }, 150);
+    });
+  }
+
   /* ---------- content calendar (team marketing copy, kept verbatim) ---------- */
   var posts = [
     { w: "Week 1 · Mon", pillar: 1, tag: "The Case Against Passive",
